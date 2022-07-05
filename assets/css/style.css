@@ -58,6 +58,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
+.imagen-cap{
+  max-width: 400px;
+}
+
+.imagen-cap-c{
+  max-width: 250px;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -1441,11 +1449,11 @@ section {
   padding: 15px 0;
   background: #f3f5fa;
   min-height: 40px;
-  margin-top: 72px;
+  margin-top: 10px;
 }
 @media (max-width: 992px) {
   .breadcrumbs {
-    margin-top: 68px;
+    margin-top: 10px;
   }
 }
 .breadcrumbs h2 {
