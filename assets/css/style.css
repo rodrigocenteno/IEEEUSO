@@ -1,9 +1,4 @@
-h3/**
-* Template Name: Arsha - v4.7.1
-* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 /*--------------------------------------------------------------
 # General
@@ -48,6 +43,19 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.spc{
+  margin-left: 85px;
+}
+
+.img-voluntarios{
+  width: 8em;
+  height: 8em;
+}
+
+.espacio-eventos{
+  margin-bottom: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -203,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar .getstarted, .navbar .getstarted:focus {
   padding: 8px 20px;
-  margin-left: 10px;
+  margin-left: 20px;
   border-radius: 50px;
   color: rgb(38, 74, 127);
   font-size: 14px;
@@ -367,13 +375,19 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 30rem;
   background: #37517e;
   
 }
 #hero .container {
-  padding-top: 72px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
+#hero .hero-img img {
+  width: 100%;
+}
+
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
@@ -426,7 +440,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 991px) {
   #hero {
-    height: 100vh;
+
     text-align: center;
   }
   #hero .animated {
@@ -437,10 +451,14 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
   #hero .hero-img img {
-    width: 50%;
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
+  #hero {
+    height: 20rem;
+    text-align: center;
+  }
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
@@ -451,12 +469,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
   }
   #hero .hero-img img {
-    width: 70%;
+    width: 100%;
   }
 }
 @media (max-width: 575px) {
+  #hero{
+    height: 15rem;
+  }
   #hero .hero-img img {
-    width: 80%;
+    width: 100%;
   }
   #hero .btn-get-started {
     font-size: 16px;
@@ -992,7 +1013,7 @@ section {
 }
 .team .member .pic {
   overflow: hidden;
-  width: 180px;
+
   border-radius: 50%;
 }
 .team .member .pic img {
