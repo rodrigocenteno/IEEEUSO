@@ -1,6 +1,10 @@
 const nombre = document.querySelector("#name");
-const email = document.querySelector("#email");
-const subject = document.querySelector("#subject");
+const tel = document.querySelector("#tel");
+const email_p = document.querySelector("#email_p");
+const email_i = document.querySelector("#email_i");
+const carrera = document.querySelector("#carrera");
+const pago = document.querySelector("#pago");
+const capitulo = document.querySelector("#capitulo");
 const message = document.querySelector("#message");
 const formulario_email = document.querySelector("#formulario_email");
 
@@ -11,8 +15,8 @@ const enviar_mensaje = async (e)=>{
     try {
         var data = JSON.stringify({
             "nombre": nombre.value,
-            "correo": email.value,
-            "mensaje": "ASUNTO : "+subject.value +"\n Mensaje :" +message.value
+            "correo": "Personal: " + email_p.value + "  Institucional: " + email_i,
+            "mensaje": "\n Telefono : "+tel.value +"\n Carrera :" +carrera.value + "\n Pago :" +pago.value + "\n Capitulo :" +capitulo.value + "\n Mesaje :" +message.value,
           })
           console.log(data) 
           var config = {

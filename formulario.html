@@ -88,7 +88,7 @@
 
         <ol>
           <li><a href="index.html">Inicio</a></li>
-          <li>Rama Estudiantil</li>
+          <li>Unete a IEEE</li>
         </ol>
         
 
@@ -99,21 +99,66 @@
     <form id="formulario_email" class="php-email-form">
       <div class="row">
         <div class="form-group col-md-6">
-          <label for="name">Nombre</label>
+          <label for="name">Nombre completo</label>
           <input type="text" name="name" class="form-control" id="name" required>
         </div>
         <div class="form-group col-md-6">
-          <label for="name">Correo</label>
-          <input type="email" class="form-control" name="email" id="email" required>
+          <label for="tel">Número de teléfono</label>
+          <input type="tel" class="form-control" name="tel" id="tel"  pattern="[0-9]{8}" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email_p">Correo personal</label>
+          <input type="email" class="form-control" name="email_p" id="email_p" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email_i">Correo institucional</label>
+          <input type="email" class="form-control" name="email_i" id="email_i" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="carrera">Carrera</label>
+          <select class="form-control" name="carrera" id="carrera" required>
+            <option value="Industrial">Seleccione una carrera</option>
+            <option value="Industrial">Ingenieria Industrial</option>
+            <option value="Electrica">Ingenieria Electrica</option>
+            <option value="Sistemas">Ingenieria en Sistemas Computacionales</option>
+            <option value="Agronegocios">Ingenieria en Agronegocios</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="pago">Pago</label>
+          <select class="form-control" name="pago" id="pago" required>
+            <option value="Efectivo">Seleccione el tipo de pago</option>
+            <option value="Efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta de crédito o débito</option>
+          </select>
+        </div>
+        
+
+      </div>
+      <div class="form-group">
+        <label for="">Capitulos de interes</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="CS" id="CS">
+          <label class="form-check-label" for="CS">Computer</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="IAS" id="IAS">
+          <label class="form-check-label" for="IAS">Industry Applications</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="PES" id="PES">
+          <label class="form-check-label" for="PES">Power & Energy</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="RAS" id="RAS">
+          <label class="form-check-label" for="RAS">Robotics & Automation</label>
         </div>
       </div>
-      <div class="form-group">
-        <label for="name">Asunto</label>
-        <input type="text" class="form-control" name="subject" id="subject" required>
-      </div>
+
+     
       <div class="form-group">
         <label for="name">Mensaje</label>
-        <textarea class="form-control" name="message" rows="10" id="message" required></textarea>
+        <textarea class="form-control" name="message" rows="10" id="message"></textarea>
       </div>
       <div class="text-center"><button type="submit">Enviar</button></div>
     </form>
