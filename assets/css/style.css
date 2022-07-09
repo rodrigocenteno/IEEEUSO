@@ -68,15 +68,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .imagen-cap{
-  max-width: 400px;
+  max-width: 350px;
 }
 
 .imagen-cap-c{
   max-width: 250px;
 }
 
-.alinear-izquierda{
+.alinear-justificado{
   text-align: justify;
+}
+
+.margen-texto{
+  
+  margin-left: 23%;
+  margin-right: 23%;
 }
 
 /*--------------------------------------------------------------
