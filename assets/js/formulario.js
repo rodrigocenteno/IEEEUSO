@@ -4,10 +4,34 @@ const email_p = document.querySelector("#email_p");
 const email_i = document.querySelector("#email_i");
 const carrera = document.querySelector("#carrera");
 const pago = document.querySelector("#pago");
-const capitulo = document.querySelector("#capitulo");
+const CS = document.querySelector("#CS");
+const IAS = document.querySelector("#IAS");
+const PES = document.querySelector("#PES");
+const RAS = document.querySelector("#RAS");
 const message = document.querySelector("#message");
 const formulario_email = document.querySelector("#formulario_email");
-
+let capitulo = "";
+CS.addEventListener('click', function() {
+  if(CS.checked) {
+    capitulo += " " + CS.value;
+  }
+})
+  
+IAS.addEventListener('click', function() {
+  if(IAS.checked) {
+    capitulo += " " + IAS.value;
+  }
+})
+PES.addEventListener('click', function() {
+  if(PES.checked) {
+    capitulo += " " + PES.value;
+  }
+})
+RAS.addEventListener('click', function() {
+  if(RAS.checked) {
+    capitulo += " " + RAS.value;
+  }
+})
 
 
 const enviar_mensaje = async (e)=>{
@@ -15,8 +39,8 @@ const enviar_mensaje = async (e)=>{
     try {
         var data = JSON.stringify({
             "nombre": nombre.value,
-            "correo": "Personal: " + email_p.value + "  Institucional: " + email_i,
-            "mensaje": "\n Telefono : "+tel.value +"\n Carrera :" +carrera.value + "\n Pago :" +pago.value + "\n Capitulo :" +capitulo.value + "\n Mesaje :" +message.value,
+            "correo": "Personal: " + email_p.value + "  Institucional: " + email_i.value,
+            "mensaje": "\n Telefono : "+tel.value +"\n Carrera :" +carrera.value + "\n Pago :" +pago.value + "\n Capitulo :" +capitulo + "\n Mensaje :" +message.value,
           })
           console.log(data) 
           var config = {
@@ -44,6 +68,10 @@ const enviar_mensaje = async (e)=>{
           }
 
     } catch (error) {
+      console.log(error.name)
+      console.log(error.message)
+      console.log(error.stack) 
+
         Swal.fire({
 
             icon: 'error',
