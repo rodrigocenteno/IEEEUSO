@@ -60,7 +60,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="index.html">Inicio</a></li>
           <li><a class="nav-link scrollto" href="Rama.html">Nosotros</a></li>          
-          <li class="dropdown"><a href=""><span>Capitulos</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a><span>Capitulos</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="cs.html">Computer</a></li>              
               <li><a href="ias.html">Industry Applications</a></li>
@@ -95,7 +95,48 @@
       </div>
     </section><!-- End Breadcrumbs -->
 
+<!-- ======= Voluntarios Destacados ======= -->
+<section id="team" class="">
+  <div class="container" data-aos="fade-up">
 
+    <div class="section-title">
+      <h2>Voluntarios</h2>
+    </div>
+      <table class="table"  id="volunt">
+        <thead class="thead-dark">
+          <tr>
+            <th>Codigo</th>
+            <th>Voluntario</th>
+            <th>Capitulo</th>
+            <th>Grado</th>
+            <th>Linkdln</th>
+          </tr>
+        </thead>
+        <script >
+          const divvoluntario = document.querySelector('#volunt');
+          document.addEventListener('DOMContentLoaded',async  () => {
+          const respuesta= await fetch('https://iee-uso.herokuapp.com/api/voluntarios');
+          const data =  await respuesta.json();
+          const voluntarios = data.payload.voluntarios;
+          console.log(voluntarios)
+          voluntarios.forEach(v => {
+            const tbody = document.createElement("tbody")
+            tbody.innerHTML = `
+            <tr>
+              <td>${v.noMiembro}</td>
+              <td>${v.nombres} ${v.apellidos}</td>
+              <td>${v?.capitulo?.nombre}</td>
+              <td>${v?.grado?.grado}</td>
+              <td>${v.linkedin}</td>
+            </tr>`                     
+            divvoluntario.appendChild(tbody)
+            });
+          });
+        </script>
+        </tbody>
+      </table>
+  </div>
+</section><!-- End Team Section -->
 
 
 

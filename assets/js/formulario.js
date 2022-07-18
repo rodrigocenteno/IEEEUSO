@@ -39,8 +39,8 @@ const enviar_mensaje = async (e)=>{
     try {
         var data = JSON.stringify({
             "nombre": nombre.value,
-            "correo": "Personal: " + email_p.value + "  Institucional: " + email_i.value,
-            "mensaje": "\n Telefono : "+tel.value +"\n Carrera :" +carrera.value + "\n Pago :" +pago.value + "\n Capitulo :" +capitulo + "\n Mensaje :" +message.value,
+            "correo": email_p.value,
+            "mensaje": "\n Personal: " + email_p.value + "  Institucional: " + email_i.value + "\n Telefono : "+tel.value +"\n Carrera :" +carrera.value + "\n Pago :" +pago.value + "\n Capitulo :" +capitulo + "\n Mensaje :" +message.value,
           })
           console.log(data) 
           var config = {
