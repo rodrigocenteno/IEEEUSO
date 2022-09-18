@@ -1057,11 +1057,16 @@ section {
 }
 .team .member .pic {
   overflow: hidden;
+  min-width: 128px;
+  min-height: 128px;
   max-width: 150px;
+  max-height: 150px;
   border-radius: 50%;
 }
 .team .member .pic img {
   transition: ease-in-out 0.3s;
+  min-width: 100px;
+  min-height: 100px;;
 }
 .team .member:hover {
   transform: translateY(-10px);
