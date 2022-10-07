@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - Arsha Bootstrap Template</title>
+  <title>Eventos IEEE USO</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -72,7 +72,7 @@
           <li><a class="nav-link scrollto" href="eventos.html">Eventos</a></li>
           <li><a class="nav-link scrollto" href="voluntarios.html">Voluntarios</a></li>
           <li><a class="nav-link scrollto" href="contacto.html">Contacto</a></li>
-          <li><a class="getstarted scrollto" href="formulario.html">Unete a IEEE</a></li>
+          <li><a class="getstarted scrollto" href="formulario.html">Únete a IEEE</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -108,9 +108,9 @@
                 <script >
                   const divvoluntario = document.querySelector('#volun');
                   document.addEventListener('DOMContentLoaded',async  () => {
-                  const respuesta= await fetch('https://iee-uso.herokuapp.com/api/voluntarios');
+                  const respuesta= await fetch('http://iee-uso.herokuapp.com/api/proyects');
                   const data =  await respuesta.json();
-                  const voluntarios = data.payload.voluntarios;
+                  const voluntarios = data.payload.proyectos;
                   console.log(voluntarios)
                   voluntarios.forEach(v => {
                     const div = document.createElement("div")
@@ -119,13 +119,11 @@
                     <div class="member d-flex align-items-start espacio-eventos" data-aos="zoom-in" data-aos-delay="100">
                       <div class="cuadrado-img"><img src="${v.img}" class="img-eventos" alt=""></div>
                         <div class="member-info">
-                          <h4>${v.nombres}</h4>
-                          <span>${v?.capitulo?.nombre}</span>
-                          <p>Descripcion</p>
+                          <h4>${v.titulo}</h4>
+                          <span>${v.descripcion}</span>
+                          <a href="${v.sitio}">Participa</a>
                           <div class="social">
-                          <a href=""><i class="ri-facebook-fill"></i></a>
-                          <a href=""><i class="ri-instagram-fill"></i></a>
-                          <a href=""><i class="ri-linkedin-box-fill"></i></a>
+                          <a href="${v.subTitulo}"><i class="ri-facebook-fill"></i></a>
                         </div>
                       </div>
                     </div>`
@@ -149,18 +147,7 @@
   <!-- ======= Footer ======= -->
 
 
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+  <footer id="footer">
   </footer><!-- End Footer -->
 
   <div id="preloader"></div>
